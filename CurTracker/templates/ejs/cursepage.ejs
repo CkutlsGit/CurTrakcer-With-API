@@ -1,0 +1,48 @@
+<%- include('header') -%>
+<link rel="stylesheet" href="/styles/css/curse.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inder&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<title>Curse Page Tracker</title>
+
+<header class="header">
+    <div class="header__logo"><a href="/">CurTracker</a></div>
+    <div class="header__nav">
+        <nav>
+            <a href="/curse" class="nav__btn--now">Актуальные Курсы</a>
+            <a href="/convert" class="nav__btn">Конвентатор</a>
+        </nav>
+    </div>
+</header>
+<section class="curse">
+    <div class="curse__content">
+        <div class="curse__items">
+            <div class="curse__item">
+                <div class="curse__item--border">
+                    <h1><%= CurRub %> Рубль</h1>
+                </div>
+                <div class="curse__item--border">
+                    <h1><%= CurEur %> Евро</h1>
+                </div>
+                <div class="curse__item--border">
+                    <h1><%= CurJpy  %> Японская йена</h1>
+                </div>
+            </div>
+            <div class="curse__item">
+                <div class="curse__item--border">
+                    <h1><%= CurGbp %> Фунт стерлингов</h1>
+                </div>
+                <div class="curse__item--border">
+                    <h1><%= CurChf %> Швейцарский франк</h1>
+                </div>
+                <div class="curse__item--border">
+                    <h1><%= CurCad %> Канадский доллар</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+
+<script src="/scripts/CursePage.js"></script>
+<%- include('footer') -%>

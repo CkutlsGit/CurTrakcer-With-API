@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/css/convertator.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inder&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <title>CurseTracker - Convertator</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__logo"><a href="/">CurTracker</a></div>
+        <div class="header__nav">
+            <nav>
+                <a href="/curse" class="nav__btn">Актуальные Курсы</a>
+                <a href="/convert" class="nav__btn--now">Конвентатор</a>
+            </nav>
+        </div>
+    </header>
+    <section class="convertator">
+        <form action="/convert" method="post">
+        <label for="amount" id="amount__label">Количество:</label>
+        <input type="text" id="amount" name="amount" required><br><br>
+        
+        <label for="currency" id="currency__label">Валюта:</label>
+        <select name="to" id="currency">
+            <option value="RUB">RUB</option>
+            <option value="EUR">EUR</option>
+            <option value="JPY">JPY</option>
+            <option value="GBP">GBP</option>
+            <option value="CHF">CHF</option>
+            <option value="CAN">CAN</option>
+          </select><br><br>          
+              
+        <input type="submit" value="Convert">
+      </form>
+    </section>
+    <script src="/scripts/ConvertatorPage.js"></script>
+</body>
+</html>

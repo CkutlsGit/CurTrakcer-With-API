@@ -1,0 +1,44 @@
+<%- include('header') -%>
+<link rel="stylesheet" href="/styles/css/convertresult.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inder&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<title>Convertator Result</title>
+
+<header class="header">
+    <div class="header__logo"><a href="/">CurTracker</a></div>
+    <div class="header__nav">
+        <nav>
+            <a href="/curse" class="nav__btn">Актуальные Курсы</a>
+            <a href="/convert" class="nav__btn">Конвентатор</a>
+        </nav>
+    </div>
+</header>
+<section class="result">
+    <div class="result__container">
+        <div class="result__content">
+            <div class="result__content--items">
+                <h1>Из USD в <%= toCurrency %></h1>
+                <h1>Количество USD: <%= amount %> $</h1>
+                <% if (toCurrency === 'RUB') { %>
+                    <h1>Результат - <%= result %> ₽</h1>
+                <% } else if (toCurrency === 'EUR') { %>
+                    <h1>Результат - <%= result %> €</h1>
+                <% } else if (toCurrency === 'JPY') { %>
+                    <h1>Результат - <%= result %> ¥</h1>
+                <% } else if (toCurrency === 'GBP') { %>
+                    <h1>Результат - <%= result %> £</h1>
+                <% } else if (toCurrency === 'CHF') { %>
+                    <h1>Результат - <%= result %> ₣</h1>
+                <% } else if (toCurrency === 'CAN') { %>
+                    <h1>Результат - <%= result %> $</h1>
+                <% } %>
+            </div>
+        </div>
+        <div class="result__btn">
+            <a href="/convert">Назад</a>
+        </div>
+    </div>
+</section>
+
+<%- include('footer') -%>
